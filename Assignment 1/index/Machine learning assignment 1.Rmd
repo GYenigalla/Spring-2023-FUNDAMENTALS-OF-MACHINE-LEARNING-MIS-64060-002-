@@ -1,0 +1,44 @@
+---
+title: "Assignment 1"
+author: "Gayathri Yenigalla"
+date: "2023-01-29"
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+
+
+
+#Downloaded the Dataset From Kaggle
+
+#Importing the dataset to RStudio
+```{r}
+train <- read.csv("C:/Users/Kittu Varma/Downloads/train.csv")
+head(train)
+```
+
+#Summary of the train dataset
+```{r}
+summary(train)
+
+```
+
+
+
+#Transformation of OverallQual Variable 
+```{r}
+train$OverallQual <- (train$OverallQual - mean(train$OverallQual)/sd(train$OverallQual))
+train$OverallQual
+```
+
+#Histogram and Scatter plot
+```{r}
+#Histogram Chart
+hist(train$OverallQual)
+
+#plotting the scatter plot
+plot(train$BsmtFinSF1,train$BsmtUnfSF)
+
+
+```
