@@ -1,0 +1,1294 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={fml final},
+  pdfauthor={Gayathri Yenigalla},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{fml final}
+\author{Gayathri Yenigalla}
+\date{2023-05-07}
+
+\begin{document}
+\maketitle
+
+\#Importing the Library
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## -- Attaching core tidyverse packages ------------------------ tidyverse 2.0.0 --
+## v dplyr     1.1.0     v readr     2.1.4
+## v forcats   1.0.0     v stringr   1.5.0
+## v ggplot2   3.4.1     v tibble    3.1.8
+## v lubridate 1.9.2     v tidyr     1.3.0
+## v purrr     1.0.1     
+## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+## i Use the ]8;;http://conflicted.r-lib.org/conflicted package]8;; to force all conflicts to become errors
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(dplyr)}
+\FunctionTok{library}\NormalTok{(tidyr)}
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{library}\NormalTok{(ggthemes)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'ggthemes' was built under R version 4.2.3
+\end{verbatim}
+
+\#Loading the Dataset
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(readr)}
+\NormalTok{fuel }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"C:/Users/gaya3/Downloads/fuel.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Checking the dataset}
+\FunctionTok{str}\NormalTok{(fuel)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    608564 obs. of  30 variables:
+##  $ rowid                                   : int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ plant_id_eia                            : int  3 3 3 7 7 7 7 8 8 8 ...
+##  $ plant_id_eia_label                      : chr  "Barry" "Barry" "Barry" "Gadsden" ...
+##  $ report_date                             : chr  "2008-01-01" "2008-01-01" "2008-01-01" "2008-01-01" ...
+##  $ contract_type_code                      : chr  "C" "C" "C" "C" ...
+##  $ contract_type_code_label                : chr  "C" "C" "C" "C" ...
+##  $ contract_expiration_date                : chr  "2008-04-01" "2008-04-01" "" "2015-12-01" ...
+##  $ energy_source_code                      : chr  "BIT" "BIT" "NG" "BIT" ...
+##  $ energy_source_code_label                : chr  "BIT" "BIT" "NG" "BIT" ...
+##  $ fuel_type_code_pudl                     : chr  "coal" "coal" "gas" "coal" ...
+##  $ fuel_group_code                         : chr  "coal" "coal" "natural_gas" "coal" ...
+##  $ mine_id_pudl                            : int  0 0 NA 1 2 3 NA 4 4 1 ...
+##  $ mine_id_pudl_label                      : int  0 0 NA 1 2 3 NA 4 4 1 ...
+##  $ supplier_name                           : chr  "interocean coal" "interocean coal" "bay gas pipeline" "alabama coal" ...
+##  $ fuel_received_units                     : num  259412 52241 2783619 25397 764 ...
+##  $ fuel_mmbtu_per_unit                     : num  23.1 22.8 1.04 24.61 24.45 ...
+##  $ sulfur_content_pct                      : num  0.49 0.48 0 1.69 0.84 1.54 0 2.16 1.24 1.9 ...
+##  $ ash_content_pct                         : num  5.4 5.7 0 14.7 15.5 14.6 0 15.4 11.9 15.4 ...
+##  $ mercury_content_ppm                     : num  NA NA NA NA NA NA NA NA NA NA ...
+##  $ fuel_cost_per_mmbtu                     : num  2.13 2.12 8.63 2.78 3.38 ...
+##  $ primary_transportation_mode_code        : chr  "RV" "RV" "PL" "TR" ...
+##  $ primary_transportation_mode_code_label  : chr  "RV" "RV" "PL" "TR" ...
+##  $ secondary_transportation_mode_code      : chr  "" "" "" "" ...
+##  $ secondary_transportation_mode_code_label: chr  "" "" "" "" ...
+##  $ natural_gas_transport_code              : chr  "firm" "firm" "firm" "firm" ...
+##  $ natural_gas_delivery_contract_type_code : chr  "" "" "" "" ...
+##  $ moisture_content_pct                    : num  NA NA NA NA NA NA NA NA NA NA ...
+##  $ chlorine_content_ppm                    : num  NA NA NA NA NA NA NA NA NA NA ...
+##  $ data_maturity                           : chr  "final" "final" "final" "final" ...
+##  $ data_maturity_label                     : chr  "final" "final" "final" "final" ...
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Exploring the dataset}
+\FunctionTok{glimpse}\NormalTok{(fuel)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 608,564
+## Columns: 30
+## $ rowid                                    <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10~
+## $ plant_id_eia                             <int> 3, 3, 3, 7, 7, 7, 7, 8, 8, 8,~
+## $ plant_id_eia_label                       <chr> "Barry", "Barry", "Barry", "G~
+## $ report_date                              <chr> "2008-01-01", "2008-01-01", "~
+## $ contract_type_code                       <chr> "C", "C", "C", "C", "S", "S",~
+## $ contract_type_code_label                 <chr> "C", "C", "C", "C", "S", "S",~
+## $ contract_expiration_date                 <chr> "2008-04-01", "2008-04-01", "~
+## $ energy_source_code                       <chr> "BIT", "BIT", "NG", "BIT", "B~
+## $ energy_source_code_label                 <chr> "BIT", "BIT", "NG", "BIT", "B~
+## $ fuel_type_code_pudl                      <chr> "coal", "coal", "gas", "coal"~
+## $ fuel_group_code                          <chr> "coal", "coal", "natural_gas"~
+## $ mine_id_pudl                             <int> 0, 0, NA, 1, 2, 3, NA, 4, 4, ~
+## $ mine_id_pudl_label                       <int> 0, 0, NA, 1, 2, 3, NA, 4, 4, ~
+## $ supplier_name                            <chr> "interocean coal", "interocea~
+## $ fuel_received_units                      <dbl> 259412, 52241, 2783619, 25397~
+## $ fuel_mmbtu_per_unit                      <dbl> 23.100, 22.800, 1.039, 24.610~
+## $ sulfur_content_pct                       <dbl> 0.49, 0.48, 0.00, 1.69, 0.84,~
+## $ ash_content_pct                          <dbl> 5.4, 5.7, 0.0, 14.7, 15.5, 14~
+## $ mercury_content_ppm                      <dbl> NA, NA, NA, NA, NA, NA, NA, N~
+## $ fuel_cost_per_mmbtu                      <dbl> 2.135, 2.115, 8.631, 2.776, 3~
+## $ primary_transportation_mode_code         <chr> "RV", "RV", "PL", "TR", "TR",~
+## $ primary_transportation_mode_code_label   <chr> "RV", "RV", "PL", "TR", "TR",~
+## $ secondary_transportation_mode_code       <chr> "", "", "", "", "", "", "", "~
+## $ secondary_transportation_mode_code_label <chr> "", "", "", "", "", "", "", "~
+## $ natural_gas_transport_code               <chr> "firm", "firm", "firm", "firm~
+## $ natural_gas_delivery_contract_type_code  <chr> "", "", "", "", "", "", "", "~
+## $ moisture_content_pct                     <dbl> NA, NA, NA, NA, NA, NA, NA, N~
+## $ chlorine_content_ppm                     <dbl> NA, NA, NA, NA, NA, NA, NA, N~
+## $ data_maturity                            <chr> "final", "final", "final", "f~
+## $ data_maturity_label                      <chr> "final", "final", "final", "f~
+\end{verbatim}
+
+\#cleaning data
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# col names with missing values}
+\FunctionTok{colnames}\NormalTok{(fuel)[}\FunctionTok{colSums}\NormalTok{(}\FunctionTok{is.na}\NormalTok{(fuel)) }\SpecialCharTok{\textgreater{}} \DecValTok{0}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "mine_id_pudl"         "mine_id_pudl_label"   "mercury_content_ppm" 
+## [4] "fuel_cost_per_mmbtu"  "moisture_content_pct" "chlorine_content_ppm"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# all missing values}
+\NormalTok{all }\OtherTok{\textless{}{-}}\NormalTok{ fuel }\SpecialCharTok{\%\textgreater{}\%}
+\FunctionTok{summarise\_all}\NormalTok{(}\FunctionTok{funs}\NormalTok{(}\FunctionTok{sum}\NormalTok{(}\FunctionTok{is.na}\NormalTok{(.)))) }\SpecialCharTok{\%\textgreater{}\%}
+\FunctionTok{gather}\NormalTok{(}\AttributeTok{key =} \StringTok{"variable"}\NormalTok{, }\AttributeTok{value =} \StringTok{"missing\_values"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+\FunctionTok{filter}\NormalTok{(missing\_values }\SpecialCharTok{\textgreater{}} \DecValTok{0}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+\FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(missing\_values))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: `funs()` was deprecated in dplyr 0.8.0.
+## i Please use a list of either functions or lambdas:
+## 
+## # Simple named list: list(mean = mean, median = median)
+## 
+## # Auto named with `tibble::lst()`: tibble::lst(mean, median)
+## 
+## # Using lambdas list(~ mean(., trim = .2), ~ median(., na.rm = TRUE))
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{fuel }\OtherTok{\textless{}{-}}\NormalTok{ fuel }\SpecialCharTok{\%\textgreater{}\%}
+\FunctionTok{select}\NormalTok{ (}\SpecialCharTok{{-}}\NormalTok{all}\SpecialCharTok{$}\NormalTok{variable)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# checking the dataset}
+\FunctionTok{str}\NormalTok{(fuel)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    608564 obs. of  24 variables:
+##  $ rowid                                   : int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ plant_id_eia                            : int  3 3 3 7 7 7 7 8 8 8 ...
+##  $ plant_id_eia_label                      : chr  "Barry" "Barry" "Barry" "Gadsden" ...
+##  $ report_date                             : chr  "2008-01-01" "2008-01-01" "2008-01-01" "2008-01-01" ...
+##  $ contract_type_code                      : chr  "C" "C" "C" "C" ...
+##  $ contract_type_code_label                : chr  "C" "C" "C" "C" ...
+##  $ contract_expiration_date                : chr  "2008-04-01" "2008-04-01" "" "2015-12-01" ...
+##  $ energy_source_code                      : chr  "BIT" "BIT" "NG" "BIT" ...
+##  $ energy_source_code_label                : chr  "BIT" "BIT" "NG" "BIT" ...
+##  $ fuel_type_code_pudl                     : chr  "coal" "coal" "gas" "coal" ...
+##  $ fuel_group_code                         : chr  "coal" "coal" "natural_gas" "coal" ...
+##  $ supplier_name                           : chr  "interocean coal" "interocean coal" "bay gas pipeline" "alabama coal" ...
+##  $ fuel_received_units                     : num  259412 52241 2783619 25397 764 ...
+##  $ fuel_mmbtu_per_unit                     : num  23.1 22.8 1.04 24.61 24.45 ...
+##  $ sulfur_content_pct                      : num  0.49 0.48 0 1.69 0.84 1.54 0 2.16 1.24 1.9 ...
+##  $ ash_content_pct                         : num  5.4 5.7 0 14.7 15.5 14.6 0 15.4 11.9 15.4 ...
+##  $ primary_transportation_mode_code        : chr  "RV" "RV" "PL" "TR" ...
+##  $ primary_transportation_mode_code_label  : chr  "RV" "RV" "PL" "TR" ...
+##  $ secondary_transportation_mode_code      : chr  "" "" "" "" ...
+##  $ secondary_transportation_mode_code_label: chr  "" "" "" "" ...
+##  $ natural_gas_transport_code              : chr  "firm" "firm" "firm" "firm" ...
+##  $ natural_gas_delivery_contract_type_code : chr  "" "" "" "" ...
+##  $ data_maturity                           : chr  "final" "final" "final" "final" ...
+##  $ data_maturity_label                     : chr  "final" "final" "final" "final" ...
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Ensure that the variables have the right attributes. For example,
+  numerical or categorical.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# attributes}
+\FunctionTok{sapply}\NormalTok{(fuel, class)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                                    rowid 
+##                                "integer" 
+##                             plant_id_eia 
+##                                "integer" 
+##                       plant_id_eia_label 
+##                              "character" 
+##                              report_date 
+##                              "character" 
+##                       contract_type_code 
+##                              "character" 
+##                 contract_type_code_label 
+##                              "character" 
+##                 contract_expiration_date 
+##                              "character" 
+##                       energy_source_code 
+##                              "character" 
+##                 energy_source_code_label 
+##                              "character" 
+##                      fuel_type_code_pudl 
+##                              "character" 
+##                          fuel_group_code 
+##                              "character" 
+##                            supplier_name 
+##                              "character" 
+##                      fuel_received_units 
+##                                "numeric" 
+##                      fuel_mmbtu_per_unit 
+##                                "numeric" 
+##                       sulfur_content_pct 
+##                                "numeric" 
+##                          ash_content_pct 
+##                                "numeric" 
+##         primary_transportation_mode_code 
+##                              "character" 
+##   primary_transportation_mode_code_label 
+##                              "character" 
+##       secondary_transportation_mode_code 
+##                              "character" 
+## secondary_transportation_mode_code_label 
+##                              "character" 
+##               natural_gas_transport_code 
+##                              "character" 
+##  natural_gas_delivery_contract_type_code 
+##                              "character" 
+##                            data_maturity 
+##                              "character" 
+##                      data_maturity_label 
+##                              "character"
+\end{verbatim}
+
+3.To ensure that both the data, and the analysis are unique to each
+student, randomly sample about 2\% of your data using a random 4-digit
+number as the seed to sample the data. Use 75\% of the sampled data as
+the training set, and the rest as the test set (if needed). This should
+yield a training set of about 9000 and a test of about 3000.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# set seed}
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{1234}\NormalTok{)}
+
+\CommentTok{\#test the data}
+\NormalTok{sampled }\OtherTok{\textless{}{-}}\NormalTok{ fuel }\SpecialCharTok{\%\textgreater{}\%}
+\FunctionTok{sample\_frac}\NormalTok{(}\FloatTok{0.02}\NormalTok{)}
+
+\CommentTok{\# dividing the data}
+\NormalTok{train }\OtherTok{\textless{}{-}}\NormalTok{ sampled }\SpecialCharTok{\%\textgreater{}\%}
+\FunctionTok{sample\_frac}\NormalTok{(}\FloatTok{0.75}\NormalTok{)}
+\NormalTok{test }\OtherTok{\textless{}{-}}\NormalTok{ sampled }\SpecialCharTok{\%\textgreater{}\%}
+\FunctionTok{anti\_join}\NormalTok{(train)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Joining with `by = join_by(rowid, plant_id_eia, plant_id_eia_label,
+## report_date, contract_type_code, contract_type_code_label,
+## contract_expiration_date, energy_source_code, energy_source_code_label,
+## fuel_type_code_pudl, fuel_group_code, supplier_name, fuel_received_units,
+## fuel_mmbtu_per_unit, sulfur_content_pct, ash_content_pct,
+## primary_transportation_mode_code, primary_transportation_mode_code_label,
+## secondary_transportation_mode_code, secondary_transportation_mode_code_label,
+## natural_gas_transport_code, natural_gas_delivery_contract_type_code,
+## data_maturity, data_maturity_label)`
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#set a seed for reproducibility, samples 2\% of the data randomly, and then divides it into train and test sets.}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# checking the dataset}
+\FunctionTok{str}\NormalTok{(train)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    9128 obs. of  24 variables:
+##  $ rowid                                   : int  87571 142756 9625 146942 26617 579028 539024 412250 382869 133924 ...
+##  $ plant_id_eia                            : int  666 2964 55380 1393 2866 7916 57664 50481 2963 4041 ...
+##  $ plant_id_eia_label                      : chr  "J D Kennedy" "Southwestern" "Union Power Station" "R S Nelson" ...
+##  $ report_date                             : chr  "2009-06-01" "2010-05-01" "2008-02-01" "2010-06-01" ...
+##  $ contract_type_code                      : chr  "S" "S" "S" "S" ...
+##  $ contract_type_code_label                : chr  "S" "S" "S" "S" ...
+##  $ contract_expiration_date                : chr  "" "" "" "" ...
+##  $ energy_source_code                      : chr  "NG" "NG" "NG" "NG" ...
+##  $ energy_source_code_label                : chr  "NG" "NG" "NG" "NG" ...
+##  $ fuel_type_code_pudl                     : chr  "gas" "gas" "gas" "gas" ...
+##  $ fuel_group_code                         : chr  "natural_gas" "natural_gas" "natural_gas" "natural_gas" ...
+##  $ supplier_name                           : chr  "florida gas" "chesapeake" "andarko" "florida gas" ...
+##  $ fuel_received_units                     : num  249079 607 409008 467564 30780 ...
+##  $ fuel_mmbtu_per_unit                     : num  1.06 1.04 1.05 1.03 24.8 ...
+##  $ sulfur_content_pct                      : num  0 0 0 0 0.79 0 0 0.95 0 0 ...
+##  $ ash_content_pct                         : num  0 0 0 0 12 0 0 8.7 0 0 ...
+##  $ primary_transportation_mode_code        : chr  "" "" "" "" ...
+##  $ primary_transportation_mode_code_label  : chr  "" "" "" "" ...
+##  $ secondary_transportation_mode_code      : chr  "" "" "" "" ...
+##  $ secondary_transportation_mode_code_label: chr  "" "" "" "" ...
+##  $ natural_gas_transport_code              : chr  "interruptible" "interruptible" "interruptible" "interruptible" ...
+##  $ natural_gas_delivery_contract_type_code : chr  "" "" "" "" ...
+##  $ data_maturity                           : chr  "final" "final" "final" "final" ...
+##  $ data_maturity_label                     : chr  "final" "final" "final" "final" ...
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str}\NormalTok{(test)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    3043 obs. of  24 variables:
+##  $ rowid                                   : int  126055 382554 345167 199608 279106 237360 330424 131974 166742 413590 ...
+##  $ plant_id_eia                            : int  50978 1733 3399 55192 96 6061 8102 535 8 2723 ...
+##  $ plant_id_eia_label                      : chr  "Carr Street" "Monroe" "Cumberland" "Osceola" ...
+##  $ report_date                             : chr  "2010-01-01" "2015-11-01" "2014-10-01" "2011-04-01" ...
+##  $ contract_type_code                      : chr  "S" "C" "S" "S" ...
+##  $ contract_type_code_label                : chr  "S" "C" "S" "S" ...
+##  $ contract_expiration_date                : chr  "" "2015-11-01" "" "" ...
+##  $ energy_source_code                      : chr  "NG" "BIT" "DFO" "NG" ...
+##  $ energy_source_code_label                : chr  "NG" "BIT" "DFO" "NG" ...
+##  $ fuel_type_code_pudl                     : chr  "gas" "coal" "oil" "gas" ...
+##  $ fuel_group_code                         : chr  "natural_gas" "coal" "petroleum" "natural_gas" ...
+##  $ supplier_name                           : chr  "sprague energy corp" "blackhawk mining llc" "jat oil" "seminole" ...
+##  $ fuel_received_units                     : num  11537 12883 170 163405 875779 ...
+##  $ fuel_mmbtu_per_unit                     : num  1.03 25.1 5.76 1.03 1 ...
+##  $ sulfur_content_pct                      : num  0 0.76 0 0 0 0.84 3.8 0 0.99 0 ...
+##  $ ash_content_pct                         : num  0 8.2 0 0 0 ...
+##  $ primary_transportation_mode_code        : chr  "PL" "RR" "TR" "PL" ...
+##  $ primary_transportation_mode_code_label  : chr  "PL" "RR" "TR" "PL" ...
+##  $ secondary_transportation_mode_code      : chr  "" "" "" "" ...
+##  $ secondary_transportation_mode_code_label: chr  "" "" "" "" ...
+##  $ natural_gas_transport_code              : chr  "interruptible" "" "" "firm" ...
+##  $ natural_gas_delivery_contract_type_code : chr  "" "" "" "" ...
+##  $ data_maturity                           : chr  "final" "final" "final" "final" ...
+##  $ data_maturity_label                     : chr  "final" "final" "final" "final" ...
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# visualizing the data scatterplot matrix}
+\NormalTok{numValues }\OtherTok{\textless{}{-}} \FunctionTok{sapply}\NormalTok{(train, is.numeric)}
+\NormalTok{numValues}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                                    rowid 
+##                                     TRUE 
+##                             plant_id_eia 
+##                                     TRUE 
+##                       plant_id_eia_label 
+##                                    FALSE 
+##                              report_date 
+##                                    FALSE 
+##                       contract_type_code 
+##                                    FALSE 
+##                 contract_type_code_label 
+##                                    FALSE 
+##                 contract_expiration_date 
+##                                    FALSE 
+##                       energy_source_code 
+##                                    FALSE 
+##                 energy_source_code_label 
+##                                    FALSE 
+##                      fuel_type_code_pudl 
+##                                    FALSE 
+##                          fuel_group_code 
+##                                    FALSE 
+##                            supplier_name 
+##                                    FALSE 
+##                      fuel_received_units 
+##                                     TRUE 
+##                      fuel_mmbtu_per_unit 
+##                                     TRUE 
+##                       sulfur_content_pct 
+##                                     TRUE 
+##                          ash_content_pct 
+##                                     TRUE 
+##         primary_transportation_mode_code 
+##                                    FALSE 
+##   primary_transportation_mode_code_label 
+##                                    FALSE 
+##       secondary_transportation_mode_code 
+##                                    FALSE 
+## secondary_transportation_mode_code_label 
+##                                    FALSE 
+##               natural_gas_transport_code 
+##                                    FALSE 
+##  natural_gas_delivery_contract_type_code 
+##                                    FALSE 
+##                            data_maturity 
+##                                    FALSE 
+##                      data_maturity_label 
+##                                    FALSE
+\end{verbatim}
+
+\#creating a scatterplot matrix of the numerical variables in the train
+data frame, with points represented by filled circles and reduced size.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{pairs}\NormalTok{(train[,numValues], }\AttributeTok{pch =} \DecValTok{19}\NormalTok{, }\AttributeTok{cex =} \FloatTok{0.5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{fml-final-1-code_files/figure-latex/unnamed-chunk-13-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# clustering in k means}
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{2122}\NormalTok{)}
+\NormalTok{numValues }\OtherTok{\textless{}{-}} \FunctionTok{sapply}\NormalTok{(train, is.numeric)}
+\NormalTok{kmeans }\OtherTok{\textless{}{-}} \FunctionTok{kmeans}\NormalTok{(train[,numValues], }\AttributeTok{centers =} \DecValTok{3}\NormalTok{)}
+\NormalTok{kmeans}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## K-means clustering with 3 clusters of sizes 583, 111, 8434
+## 
+## Cluster means:
+##      rowid plant_id_eia fuel_received_units fuel_mmbtu_per_unit
+## 1 353664.9     37772.14          1734967.04           1.0507136
+## 2 382242.5     28576.76          5018917.32           0.9681261
+## 3 301395.7     16623.99            81635.17           9.4080154
+##   sulfur_content_pct ash_content_pct
+## 1        0.002521441      0.02504288
+## 2        0.000000000      0.00000000
+## 3        0.558086317      3.79857482
+## 
+## Clustering vector:
+##    [1] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 1 1 3 3 1 3 3 3 3 3 3 3 1 3
+##   [38] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 1
+##   [75] 3 3 3 3 3 3 3 3 3 2 3 3 3 1 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3
+##  [112] 3 3 3 3 3 3 3 3 3 3 3 1 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3
+##  [149] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+##  [186] 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 1 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3
+##  [223] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 1 3 3 3 3 3 3 3 3 3
+##  [260] 3 3 3 3 3 3 3 3 3 1 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3
+##  [297] 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+##  [334] 1 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 1 3 1 3 3 3 3 3 3 3 3 3 3 3 1 3 3
+##  [371] 3 1 3 3 3 2 3 3 3 1 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+##  [408] 3 3 3 3 3 3 3 3 3 3 2 3 2 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+##  [445] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3
+##  [482] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3
+##  [519] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+##  [556] 3 3 3 3 3 3 3 3 2 1 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+##  [593] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 2
+##  [630] 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+##  [667] 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+##  [704] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 1 1 3 3 3
+##  [741] 3 3 3 1 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 1 3 3 3 1 3 3 3 3 3 3 3
+##  [778] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+##  [815] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+##  [852] 3 3 3 3 3 3 1 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+##  [889] 3 3 3 3 3 3 3 3 1 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3
+##  [926] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3
+##  [963] 3 3 3 3 1 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3
+## [1000] 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3
+## [1037] 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 1 3 3 3 3 3 3 3 3 1 1 3 3 3 3 3 3 3 3 3 3
+## [1074] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 1 3 3 3
+## [1111] 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3
+## [1148] 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 1 3 3 3 3 3 3 3 3 3 3 3 2 3
+## [1185] 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3
+## [1222] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3
+## [1259] 3 3 3 3 3 3 1 3 3 3 1 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3
+## [1296] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [1333] 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3
+## [1370] 3 3 3 3 1 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3
+## [1407] 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [1444] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3
+## [1481] 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [1518] 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [1555] 3 3 3 1 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 1 3 3 3 3 3
+## [1592] 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3
+## [1629] 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3
+## [1666] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 1 3 3 1 3 3 3 3 3 3 3 3 3 3
+## [1703] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3
+## [1740] 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3
+## [1777] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 1 3
+## [1814] 3 3 3 3 3 3 3 3 1 1 3 3 3 1 3 3 3 3 3 2 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [1851] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3
+## [1888] 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 1 3 3 3 3 1 3 3
+## [1925] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 1 3 3 3 3 3 3 3
+## [1962] 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 1 3 3 3 3 3
+## [1999] 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [2036] 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3
+## [2073] 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3
+## [2110] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 2 3 1 3 3 1 1 3 3 3 3 3 3 2 3 3 3 3 3
+## [2147] 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 2 3 3 3 3 1 3 1
+## [2184] 3 3 3 3 3 3 1 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3
+## [2221] 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [2258] 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 2 1 3 3 3
+## [2295] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [2332] 3 3 3 3 3 3 3 1 3 3 3 2 1 1 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 1 3 3 3 3 3 3
+## [2369] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3
+## [2406] 3 3 3 3 3 1 3 1 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 2 1 3 3
+## [2443] 3 3 1 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 1 3 1 3 3 3 3 3 1 3 1 3 3 3
+## [2480] 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 2 1 3 3 1 3 3 3 3
+## [2517] 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 1 3 3 3 3 3 3 3 3 3
+## [2554] 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 1 3 3 1 3 3 3 3 3 3 3 1 3 3
+## [2591] 1 1 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3
+## [2628] 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [2665] 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [2702] 3 3 3 3 3 3 3 3 3 1 3 3 3 3 1 3 3 3 3 3 1 2 1 3 3 3 3 3 3 3 3 3 3 3 1 3 3
+## [2739] 3 3 3 1 3 3 3 3 1 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 1 3
+## [2776] 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 2 3 1 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 1 3 3
+## [2813] 3 3 3 3 3 2 2 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [2850] 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3
+## [2887] 3 3 2 3 3 3 3 3 3 3 1 3 1 3 3 3 1 3 3 3 1 3 1 3 3 3 1 3 3 3 2 3 1 3 1 3 3
+## [2924] 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3
+## [2961] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [2998] 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [3035] 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3
+## [3072] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [3109] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 2 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [3146] 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 1 3 3 3
+## [3183] 3 2 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3
+## [3220] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [3257] 3 3 3 3 3 2 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [3294] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3
+## [3331] 3 3 3 3 3 3 3 3 1 3 3 1 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 1 3 3 3 3 3 3 3 3
+## [3368] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3
+## [3405] 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3
+## [3442] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 1 3 1 3 3 3 3 3 3 3
+## [3479] 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 1 3 3
+## [3516] 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3
+## [3553] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 1 3 3 3 3 1 3 3 3 3 1 3 3 3 3 3 3 3
+## [3590] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 1 3 3 3 1 3 3 1 3 3
+## [3627] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [3664] 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3
+## [3701] 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [3738] 3 1 3 3 3 1 3 3 3 1 3 3 3 3 3 3 3 1 3 3 3 1 3 1 1 3 3 3 3 3 3 3 3 3 3 3 3
+## [3775] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3
+## [3812] 3 3 1 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3
+## [3849] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [3886] 3 3 2 3 3 3 1 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 1 3 3 3 3 3 3 3 3 3
+## [3923] 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 1 3 3 3 3 3 3 3 1 3
+## [3960] 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [3997] 1 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 1 3 3 3 3
+## [4034] 3 3 3 3 3 2 3 3 3 3 3 1 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [4071] 1 3 3 3 3 3 1 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [4108] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [4145] 3 3 1 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 1 1 1 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [4182] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3
+## [4219] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [4256] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [4293] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [4330] 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 1 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [4367] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 1 3 3 3 3 3 1 1 3 3 3 3 3 3 3 3
+## [4404] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 1 3 2 3 3 3 3 3 3 3 3 3 3 1 3 3
+## [4441] 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 1 2 3 3 3 3 3 3 1 3
+## [4478] 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [4515] 1 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 1 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [4552] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [4589] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 1 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [4626] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [4663] 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3
+## [4700] 3 3 3 3 3 1 3 3 3 1 3 1 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 1 3
+## [4737] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3
+## [4774] 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [4811] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [4848] 1 3 3 3 3 3 3 1 1 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3
+## [4885] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3
+## [4922] 3 3 3 3 1 3 3 1 3 3 1 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [4959] 3 3 2 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3
+## [4996] 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [5033] 3 3 3 3 1 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 1 3 3 3 3 3 3 3 3 3 3 3 3
+## [5070] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 1 1 1 3 3 3 3 3 3 3 3 3 3
+## [5107] 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [5144] 3 3 3 3 3 2 1 3 3 1 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3
+## [5181] 3 3 3 1 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3
+## [5218] 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3
+## [5255] 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [5292] 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [5329] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 1 3 1 3 3 3 3 3 3 3 3 3 3
+## [5366] 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [5403] 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 1 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [5440] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 1 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3
+## [5477] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3
+## [5514] 3 1 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 1 1 3 3 3 3 3 3 3 3 3
+## [5551] 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [5588] 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [5625] 1 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3
+## [5662] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 1 3 3 3 3 3 3 3 1 3 3 3 3 3
+## [5699] 3 3 3 3 3 3 1 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 1 3 3
+## [5736] 3 3 1 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 2 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [5773] 3 3 3 1 3 1 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3
+## [5810] 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 2 3 3 3 1 3 3 2 3 1 3 3 3 3 3 3
+## [5847] 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 1 3 3 3 3 3 3 3 3 3 3 1 3 3 1 3 3 3 3 3 3 3
+## [5884] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3
+## [5921] 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [5958] 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 1 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3
+## [5995] 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 1 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3
+## [6032] 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [6069] 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [6106] 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [6143] 3 3 3 3 3 2 3 3 3 3 3 3 2 3 3 3 1 3 3 3 1 1 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3
+## [6180] 3 3 1 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [6217] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1
+## [6254] 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 2 3 3 3 1 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [6291] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 1 3 3 3 1 3 3 3 3 3 3 3 3 3 3
+## [6328] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [6365] 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [6402] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 2 1 3 3 3 3 3 3 3 2 3 3 3 1 3 3 3 3
+## [6439] 2 3 3 3 3 3 3 1 3 1 3 1 3 3 1 3 3 3 3 3 3 3 3 1 3 3 3 2 1 3 3 3 3 3 3 3 3
+## [6476] 2 3 3 3 3 2 1 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 1 3
+## [6513] 3 3 3 3 3 3 1 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 1 3 3 3 3
+## [6550] 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3
+## [6587] 3 3 3 2 1 3 1 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3
+## [6624] 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [6661] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 1
+## [6698] 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [6735] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 2 3 3 3 3 3 3
+## [6772] 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3
+## [6809] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3
+## [6846] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3
+## [6883] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 1 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 1
+## [6920] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 1 3 3 3
+## [6957] 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 1 3 3 3 3 3 1 3 3 3 1 3
+## [6994] 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 1 3 2 3 3 3 3 3 3
+## [7031] 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [7068] 3 3 3 3 3 3 3 3 3 3 1 1 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [7105] 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3
+## [7142] 3 3 3 3 2 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [7179] 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [7216] 3 3 3 3 3 3 1 3 3 1 3 3 3 3 3 3 3 2 3 3 3 3 1 3 3 3 1 3 3 3 3 3 3 3 3 3 3
+## [7253] 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1
+## [7290] 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [7327] 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [7364] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3
+## [7401] 3 3 1 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 1 3 3 3 3 3
+## [7438] 3 3 3 1 3 3 3 3 3 1 2 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3
+## [7475] 3 3 3 3 3 2 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3
+## [7512] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3
+## [7549] 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3
+## [7586] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [7623] 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 1 3 1 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3
+## [7660] 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3
+## [7697] 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [7734] 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 1 1 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 1 3 1 3
+## [7771] 1 3 3 3 3 3 1 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [7808] 3 3 1 3 3 3 1 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3
+## [7845] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [7882] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 1 3 3 3 3 3 3 3 2 3
+## [7919] 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3
+## [7956] 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1
+## [7993] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 1
+## [8030] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [8067] 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [8104] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [8141] 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 1 1 1 1 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 1 3
+## [8178] 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [8215] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3
+## [8252] 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [8289] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 1 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3
+## [8326] 3 3 3 3 3 1 3 3 3 3 3 3 1 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3
+## [8363] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3
+## [8400] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1
+## [8437] 3 3 3 3 3 3 3 1 3 3 1 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [8474] 3 3 3 3 3 3 2 1 3 3 3 3 3 1 3 1 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [8511] 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3
+## [8548] 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [8585] 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3
+## [8622] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [8659] 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [8696] 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1
+## [8733] 3 3 3 3 3 3 3 3 1 1 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 1 3 3 3 3 3 1 3
+## [8770] 3 3 3 3 3 3 3 3 3 1 3 3 3 3 2 3 3 2 3 3 3 1 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3
+## [8807] 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [8844] 3 3 3 3 3 3 3 3 2 3 1 3 1 3 1 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 1 3 1 3 3 3
+## [8881] 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 1 3 3 1 1 3 3 3 3 3 3
+## [8918] 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 1 3 3 3 3 3 3
+## [8955] 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3
+## [8992] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3
+## [9029] 3 3 3 1 3 3 1 1 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [9066] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3
+## [9103] 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3
+## 
+## Within cluster sum of squares by cluster:
+## [1] 2.670057e+14 3.078375e+14 4.634426e+14
+##  (between_SS / total_SS =  79.6 %)
+## 
+## Available components:
+## 
+## [1] "cluster"      "centers"      "totss"        "withinss"     "tot.withinss"
+## [6] "betweenss"    "size"         "iter"         "ifault"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# aggregate the dataset}
+\FunctionTok{aggregate}\NormalTok{(train[,numValues], }\AttributeTok{by =} \FunctionTok{list}\NormalTok{(kmeans}\SpecialCharTok{$}\NormalTok{cluster), mean)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   Group.1    rowid plant_id_eia fuel_received_units fuel_mmbtu_per_unit
+## 1       1 353664.9     37772.14          1734967.04           1.0507136
+## 2       2 382242.5     28576.76          5018917.32           0.9681261
+## 3       3 301395.7     16623.99            81635.17           9.4080154
+##   sulfur_content_pct ash_content_pct
+## 1        0.002521441      0.02504288
+## 2        0.000000000      0.00000000
+## 3        0.558086317      3.79857482
+\end{verbatim}
+
+\#visualising the dataset
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#using ggplot2 library in R to create a bar plot of the clusters generated by K{-}means clustering algorithm}
+\FunctionTok{ggplot}\NormalTok{(train, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{y =}\NormalTok{ kmeans}\SpecialCharTok{$}\NormalTok{cluster)) }\SpecialCharTok{+}
+\FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{fill =}\NormalTok{ kmeans}\SpecialCharTok{$}\NormalTok{cluster), }\AttributeTok{position =} \StringTok{"dodge"}\NormalTok{) }\SpecialCharTok{+}
+\FunctionTok{theme\_economist}\NormalTok{() }\SpecialCharTok{+}
+\FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: The following aesthetics were dropped during statistical transformation: fill
+## i This can happen when ggplot fails to infer the correct grouping structure in
+##   the data.
+## i Did you forget to specify a `group` aesthetic or to convert a numerical
+##   variable into a factor?
+\end{verbatim}
+
+\includegraphics{fml-final-1-code_files/figure-latex/unnamed-chunk-16-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# KNN}
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{1234}\NormalTok{)}
+\NormalTok{numValues }\OtherTok{\textless{}{-}} \FunctionTok{sapply}\NormalTok{(train, is.numeric)}
+\FunctionTok{library}\NormalTok{(class)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#performing a k{-}nearest neighbors (KNN) classification using the clustered data}
+\NormalTok{train1 }\OtherTok{\textless{}{-}}\NormalTok{ train[,numValues]}
+\NormalTok{test1 }\OtherTok{\textless{}{-}}\NormalTok{ test[,numValues]}
+\NormalTok{knn }\OtherTok{\textless{}{-}} \FunctionTok{knn}\NormalTok{(train1, test1, }\AttributeTok{cl =}\NormalTok{ kmeans}\SpecialCharTok{$}\NormalTok{cluster, }\AttributeTok{k =} \DecValTok{3}\NormalTok{)}
+\NormalTok{knn}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    [1] 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+##   [38] 3 3 3 3 3 3 3 3 1 3 3 3 3 1 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3
+##   [75] 1 3 3 3 3 3 3 3 1 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2
+##  [112] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 1 3 3
+##  [149] 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 1 3 1 3 3 3 3 3 3 3 3 3 3 1 3
+##  [186] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3
+##  [223] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+##  [260] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 1 3
+##  [297] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+##  [334] 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+##  [371] 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 1 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+##  [408] 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 1 3 3 3 3 3 3 3 3 3 3 1 1 3
+##  [445] 3 3 1 3 3 3 3 3 3 1 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3
+##  [482] 1 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 2 3
+##  [519] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3
+##  [556] 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3
+##  [593] 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+##  [630] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 1 3 3 1 1 3 3 3 3 3 3 3 3 3 3 3 1 3 3
+##  [667] 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 2 3 1 3 3 3 1 3 3 3 3 3
+##  [704] 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+##  [741] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3
+##  [778] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 1 3 3 1 3 3 3
+##  [815] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+##  [852] 3 3 3 1 3 3 3 3 3 3 1 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 1 3 2 3
+##  [889] 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3
+##  [926] 3 3 3 3 3 3 3 1 1 3 1 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+##  [963] 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3
+## [1000] 3 3 3 1 3 3 3 3 3 3 1 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [1037] 3 3 3 3 3 3 3 3 3 1 3 3 3 3 1 3 1 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3
+## [1074] 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3
+## [1111] 3 3 1 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3
+## [1148] 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 2 3 3 3 3 1 3 3 3 3 3 3 3 3
+## [1185] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 2 3 3 3 3 3 3 3
+## [1222] 3 2 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [1259] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 1 3 3 3 3 3
+## [1296] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3
+## [1333] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 1 3 3 3 3 3 3 3 3
+## [1370] 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3
+## [1407] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 2 3 3 3 3 3 1 3 3 3 3 3 3 3 3
+## [1444] 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [1481] 3 3 3 3 3 3 3 3 3 3 1 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3
+## [1518] 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 1 1 3 3 3 3 3 1 3 3 3
+## [1555] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [1592] 3 3 3 3 3 3 3 3 2 3 3 3 3 1 3 3 1 3 3 1 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [1629] 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [1666] 3 3 3 3 3 1 3 3 3 3 3 3 2 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [1703] 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [1740] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 1 3 3 3 3 3 3 3 3 3
+## [1777] 3 3 3 3 3 3 3 1 3 3 1 2 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [1814] 3 3 3 1 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 2 3 3 2
+## [1851] 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 1 3 3 3 3 3 1 3 3 3 3 3 3 3
+## [1888] 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3
+## [1925] 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [1962] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 1 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [1999] 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 1 3
+## [2036] 3 3 3 3 3 3 3 3 3 3 3 1 3 3 1 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [2073] 1 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1
+## [2110] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [2147] 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 1 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [2184] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 1 3 3 3 1 3 3 3 1 3 3 3 3 3 3 3
+## [2221] 3 3 3 3 3 3 3 3 3 3 2 3 3 2 3 3 3 3 3 1 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3
+## [2258] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [2295] 3 3 3 3 1 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 1 3
+## [2332] 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [2369] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3
+## [2406] 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3
+## [2443] 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 1 3 3 3
+## [2480] 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 1 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3
+## [2517] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 1 3
+## [2554] 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [2591] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [2628] 3 3 3 3 3 3 3 3 3 1 3 3 1 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 1 3 1 3 3 3
+## [2665] 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [2702] 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 2
+## [2739] 3 3 1 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3
+## [2776] 3 2 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+## [2813] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 1 3 3 3 3 1 3 3
+## [2850] 3 3 3 3 2 3 3 3 1 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 1
+## [2887] 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3
+## [2924] 3 3 1 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 1 3 3 3 3 3 1 3
+## [2961] 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3
+## [2998] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 1 3 3 3
+## [3035] 3 3 3 3 3 3 3 3 3
+## Levels: 1 2 3
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# optimal segmentation}
+\NormalTok{kmeans }\OtherTok{\textless{}{-}} \FunctionTok{kmeans}\NormalTok{(train[,numValues], }\AttributeTok{centers =} \DecValTok{3}\NormalTok{)}
+\NormalTok{kmeans}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## K-means clustering with 3 clusters of sizes 583, 8434, 111
+## 
+## Cluster means:
+##      rowid plant_id_eia fuel_received_units fuel_mmbtu_per_unit
+## 1 353664.9     37772.14          1734967.04           1.0507136
+## 2 301395.7     16623.99            81635.17           9.4080154
+## 3 382242.5     28576.76          5018917.32           0.9681261
+##   sulfur_content_pct ash_content_pct
+## 1        0.002521441      0.02504288
+## 2        0.558086317      3.79857482
+## 3        0.000000000      0.00000000
+## 
+## Clustering vector:
+##    [1] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 1 1 2 2 1 2 2 2 2 2 2 2 1 2
+##   [38] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 1
+##   [75] 2 2 2 2 2 2 2 2 2 3 2 2 2 1 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2
+##  [112] 2 2 2 2 2 2 2 2 2 2 2 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2
+##  [149] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+##  [186] 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 1 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2
+##  [223] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 2 2 2 2 2 2 2 2 2
+##  [260] 2 2 2 2 2 2 2 2 2 1 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2
+##  [297] 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+##  [334] 1 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 1 2 1 2 2 2 2 2 2 2 2 2 2 2 1 2 2
+##  [371] 2 1 2 2 2 3 2 2 2 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+##  [408] 2 2 2 2 2 2 2 2 2 2 3 2 3 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+##  [445] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2
+##  [482] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2
+##  [519] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+##  [556] 2 2 2 2 2 2 2 2 3 1 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+##  [593] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 3
+##  [630] 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+##  [667] 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+##  [704] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 1 1 2 2 2
+##  [741] 2 2 2 1 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 1 2 2 2 1 2 2 2 2 2 2 2
+##  [778] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+##  [815] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+##  [852] 2 2 2 2 2 2 1 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+##  [889] 2 2 2 2 2 2 2 2 1 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2
+##  [926] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2
+##  [963] 2 2 2 2 1 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2
+## [1000] 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2
+## [1037] 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 1 2 2 2 2 2 2 2 2 1 1 2 2 2 2 2 2 2 2 2 2
+## [1074] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 2 2 2
+## [1111] 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2
+## [1148] 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 1 2 2 2 2 2 2 2 2 2 2 2 3 2
+## [1185] 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2
+## [1222] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2
+## [1259] 2 2 2 2 2 2 1 2 2 2 1 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2
+## [1296] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [1333] 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2
+## [1370] 2 2 2 2 1 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2
+## [1407] 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [1444] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2
+## [1481] 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [1518] 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [1555] 2 2 2 1 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 1 2 2 2 2 2
+## [1592] 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2
+## [1629] 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2
+## [1666] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 1 2 2 1 2 2 2 2 2 2 2 2 2 2
+## [1703] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2
+## [1740] 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2
+## [1777] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 1 2
+## [1814] 2 2 2 2 2 2 2 2 1 1 2 2 2 1 2 2 2 2 2 3 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [1851] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2
+## [1888] 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 1 2 2 2 2 1 2 2
+## [1925] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2 1 2 2 2 2 2 2 2
+## [1962] 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 2 2 2 2 2
+## [1999] 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [2036] 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2
+## [2073] 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2
+## [2110] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 3 2 1 2 2 1 1 2 2 2 2 2 2 3 2 2 2 2 2
+## [2147] 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 3 2 2 2 2 1 2 1
+## [2184] 2 2 2 2 2 2 1 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2
+## [2221] 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [2258] 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 3 1 2 2 2
+## [2295] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [2332] 2 2 2 2 2 2 2 1 2 2 2 3 1 1 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 1 2 2 2 2 2 2
+## [2369] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2
+## [2406] 2 2 2 2 2 1 2 1 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 3 1 2 2
+## [2443] 2 2 1 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 1 2 1 2 2 2 2 2 1 2 1 2 2 2
+## [2480] 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 3 1 2 2 1 2 2 2 2
+## [2517] 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 1 2 2 2 2 2 2 2 2 2
+## [2554] 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 1 2 2 1 2 2 2 2 2 2 2 1 2 2
+## [2591] 1 1 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2
+## [2628] 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [2665] 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [2702] 2 2 2 2 2 2 2 2 2 1 2 2 2 2 1 2 2 2 2 2 1 3 1 2 2 2 2 2 2 2 2 2 2 2 1 2 2
+## [2739] 2 2 2 1 2 2 2 2 1 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 1 2
+## [2776] 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 3 2 1 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 1 2 2
+## [2813] 2 2 2 2 2 3 3 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [2850] 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2
+## [2887] 2 2 3 2 2 2 2 2 2 2 1 2 1 2 2 2 1 2 2 2 1 2 1 2 2 2 1 2 2 2 3 2 1 2 1 2 2
+## [2924] 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2
+## [2961] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [2998] 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [3035] 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2
+## [3072] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [3109] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 3 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [3146] 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 1 2 2 2
+## [3183] 2 3 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2
+## [3220] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [3257] 2 2 2 2 2 3 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [3294] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2
+## [3331] 2 2 2 2 2 2 2 2 1 2 2 1 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 1 2 2 2 2 2 2 2 2
+## [3368] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2
+## [3405] 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2
+## [3442] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 1 2 1 2 2 2 2 2 2 2
+## [3479] 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 1 2 2
+## [3516] 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2
+## [3553] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 1 2 2 2 2 1 2 2 2 2 1 2 2 2 2 2 2 2
+## [3590] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 1 2 2 2 1 2 2 1 2 2
+## [3627] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [3664] 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2
+## [3701] 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [3738] 2 1 2 2 2 1 2 2 2 1 2 2 2 2 2 2 2 1 2 2 2 1 2 1 1 2 2 2 2 2 2 2 2 2 2 2 2
+## [3775] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2
+## [3812] 2 2 1 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2
+## [3849] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [3886] 2 2 3 2 2 2 1 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 1 2 2 2 2 2 2 2 2 2
+## [3923] 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 1 2 2 2 2 2 2 2 1 2
+## [3960] 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [3997] 1 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 2 2 2 2
+## [4034] 2 2 2 2 2 3 2 2 2 2 2 1 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [4071] 1 2 2 2 2 2 1 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [4108] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [4145] 2 2 1 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [4182] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2
+## [4219] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [4256] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [4293] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [4330] 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 1 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [4367] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 1 2 2 2 2 2 1 1 2 2 2 2 2 2 2 2
+## [4404] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 1 2 3 2 2 2 2 2 2 2 2 2 2 1 2 2
+## [4441] 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 1 3 2 2 2 2 2 2 1 2
+## [4478] 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [4515] 1 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 1 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [4552] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [4589] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [4626] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [4663] 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2
+## [4700] 2 2 2 2 2 1 2 2 2 1 2 1 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 1 2
+## [4737] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2
+## [4774] 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [4811] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [4848] 1 2 2 2 2 2 2 1 1 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2
+## [4885] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2
+## [4922] 2 2 2 2 1 2 2 1 2 2 1 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [4959] 2 2 3 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2
+## [4996] 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [5033] 2 2 2 2 1 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 1 2 2 2 2 2 2 2 2 2 2 2 2
+## [5070] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 1 1 1 2 2 2 2 2 2 2 2 2 2
+## [5107] 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [5144] 2 2 2 2 2 3 1 2 2 1 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2
+## [5181] 2 2 2 1 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2
+## [5218] 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2
+## [5255] 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [5292] 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [5329] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 1 2 1 2 2 2 2 2 2 2 2 2 2
+## [5366] 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [5403] 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [5440] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 1 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2
+## [5477] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2
+## [5514] 2 1 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 1 1 2 2 2 2 2 2 2 2 2
+## [5551] 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [5588] 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [5625] 1 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2
+## [5662] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 1 2 2 2 2 2 2 2 1 2 2 2 2 2
+## [5699] 2 2 2 2 2 2 1 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 1 2 2
+## [5736] 2 2 1 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 3 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [5773] 2 2 2 1 2 1 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2
+## [5810] 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 3 2 2 2 1 2 2 3 2 1 2 2 2 2 2 2
+## [5847] 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 1 2 2 2 2 2 2 2 2 2 2 1 2 2 1 2 2 2 2 2 2 2
+## [5884] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2
+## [5921] 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [5958] 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 1 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2
+## [5995] 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 1 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2
+## [6032] 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [6069] 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [6106] 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [6143] 2 2 2 2 2 3 2 2 2 2 2 2 3 2 2 2 1 2 2 2 1 1 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2
+## [6180] 2 2 1 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [6217] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+## [6254] 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 3 2 2 2 1 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [6291] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 1 2 2 2 1 2 2 2 2 2 2 2 2 2 2
+## [6328] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [6365] 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [6402] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 3 1 2 2 2 2 2 2 2 3 2 2 2 1 2 2 2 2
+## [6439] 3 2 2 2 2 2 2 1 2 1 2 1 2 2 1 2 2 2 2 2 2 2 2 1 2 2 2 3 1 2 2 2 2 2 2 2 2
+## [6476] 3 2 2 2 2 3 1 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 1 2
+## [6513] 2 2 2 2 2 2 1 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 1 2 2 2 2
+## [6550] 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2
+## [6587] 2 2 2 3 1 2 1 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2
+## [6624] 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [6661] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 1
+## [6698] 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [6735] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 3 2 2 2 2 2 2
+## [6772] 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2
+## [6809] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2
+## [6846] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2
+## [6883] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+## [6920] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 1 2 2 2
+## [6957] 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 1 2 2 2 2 2 1 2 2 2 1 2
+## [6994] 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 1 2 3 2 2 2 2 2 2
+## [7031] 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [7068] 2 2 2 2 2 2 2 2 2 2 1 1 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [7105] 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2
+## [7142] 2 2 2 2 3 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [7179] 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [7216] 2 2 2 2 2 2 1 2 2 1 2 2 2 2 2 2 2 3 2 2 2 2 1 2 2 2 1 2 2 2 2 2 2 2 2 2 2
+## [7253] 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+## [7290] 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [7327] 2 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [7364] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2
+## [7401] 2 2 1 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 1 2 2 2 2 2
+## [7438] 2 2 2 1 2 2 2 2 2 1 3 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2
+## [7475] 2 2 2 2 2 3 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2
+## [7512] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2
+## [7549] 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2
+## [7586] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [7623] 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 1 2 1 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2
+## [7660] 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2
+## [7697] 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [7734] 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 1 1 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 1 2 1 2
+## [7771] 1 2 2 2 2 2 1 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [7808] 2 2 1 2 2 2 1 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2
+## [7845] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [7882] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 1 2 2 2 2 2 2 2 3 2
+## [7919] 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2
+## [7956] 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+## [7993] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 1
+## [8030] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [8067] 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [8104] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [8141] 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 1 1 1 1 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 1 2
+## [8178] 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [8215] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2
+## [8252] 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [8289] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 1 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2
+## [8326] 2 2 2 2 2 1 2 2 2 2 2 2 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2
+## [8363] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2
+## [8400] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+## [8437] 2 2 2 2 2 2 2 1 2 2 1 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [8474] 2 2 2 2 2 2 3 1 2 2 2 2 2 1 2 1 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [8511] 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2
+## [8548] 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [8585] 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2
+## [8622] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [8659] 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [8696] 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+## [8733] 2 2 2 2 2 2 2 2 1 1 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 2 2 2 2 2 1 2
+## [8770] 2 2 2 2 2 2 2 2 2 1 2 2 2 2 3 2 2 3 2 2 2 1 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2
+## [8807] 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [8844] 2 2 2 2 2 2 2 2 3 2 1 2 1 2 1 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 1 2 1 2 2 2
+## [8881] 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 1 2 2 1 1 2 2 2 2 2 2
+## [8918] 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 1 2 2 2 2 2 2
+## [8955] 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2
+## [8992] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2
+## [9029] 2 2 2 1 2 2 1 1 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+## [9066] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2
+## [9103] 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2
+## 
+## Within cluster sum of squares by cluster:
+## [1] 2.670057e+14 4.634426e+14 3.078375e+14
+##  (between_SS / total_SS =  79.6 %)
+## 
+## Available components:
+## 
+## [1] "cluster"      "centers"      "totss"        "withinss"     "tot.withinss"
+## [6] "betweenss"    "size"         "iter"         "ifault"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Kmeans\textquotesingle{}s length}
+\FunctionTok{length}\NormalTok{(kmeans}\SpecialCharTok{$}\NormalTok{cluster)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 9128
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# length of KNN}
+\FunctionTok{length}\NormalTok{(knn)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 3043
+\end{verbatim}
+
+\end{document}
